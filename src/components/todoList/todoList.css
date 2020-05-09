@@ -1,0 +1,39 @@
+.todoList{
+  margin-left: 150px;
+  align-items:flex-start ;  
+  list-style-type: none;
+}
+
+.todoList__buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-top:-20px ;
+  }
+
+  .todoList__span{
+    text-decoration: line-through;
+  }
+  .todoList__li{
+    cursor: pointer;
+  }
+ 
+
+  
+@media only screen and (max-width: 600px) {
+  .btn-todo{   
+    width: auto;   
+    margin-top: 10px;
+    margin-left: 0px;    
+  } 
+  .todoList__li{  
+    margin-left: -35px;      
+  }
+  
+  .todoList{
+    margin-left:0px
+  }   
+}
+
+
+
+

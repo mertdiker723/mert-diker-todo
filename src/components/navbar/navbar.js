@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import './navbar.css';
 
-class Navbar extends Component {
+class Navbar extends PureComponent {
     render() {
         return (
-            <div className="topnav">
+            <div className="top-nav">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#news">News</a>
