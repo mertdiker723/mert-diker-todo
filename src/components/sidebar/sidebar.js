@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import "./sidebar.css";
+import "./sidebar.scss";
 
 class Sidebar extends PureComponent {
     render() {

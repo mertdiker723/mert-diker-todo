@@ -1,26 +1,31 @@
+$backGroundSidebar:rgb(207, 207, 207);
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 160px;  
-    position: fixed;
-    background-color: rgb(207, 207, 207);
-    padding-top: 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 160px;  
+  /* height: 100vh; */
+  position: fixed;
+  background-color: $backGroundSidebar;
+  padding-top: 20px;
+}
   
-  .sidebar a {
+.sidebar {
+  a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
     color: #000000;
     display: block;
   }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
+}
 
-  
+.sidebar {
+  a:hover {
+    color: #f1f1f1;
+  } 
+}
+
 @media only screen and (max-width: 600px) {
   .sidebar {
     flex-direction: row;

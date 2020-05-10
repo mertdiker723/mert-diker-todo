@@ -1,11 +1,10 @@
-import React, { PureComponent } from 'react'
-import "./section.css";
+import React, { Component } from 'react'
+import "./section.scss";
 
-class Section extends PureComponent {
+class Section extends Component {
 
-    constructor() {
-        super();
-        this.myRef = React.createRef();
+    constructor(props) {
+        super(props);
         this.state = {
             value: ""
         }
@@ -18,27 +17,25 @@ class Section extends PureComponent {
     }
 
     clickAdd = () => {
-        if(this.state.value.trim() !== ''){
+        if (this.state.value.trim() !== '') {
             this.props.addTodo(this.state.value);
-            this.myRef.current.value = "";
             this.setState({
-                value:""
+                value: ""
             })
         }
-        else{
+        else {
             alert("Alanı doldurunuz.")
-        }        
+        }
     }
 
     render() {
         return (
             <div className="section">
-                <input ref={this.myRef} onChange={this.changeValue} className="section__input" type="text" />
-                <button onClick={this.clickAdd} type="submit" className="section__add">Add</button>
+                <input value={this.state.value} onChange={this.changeValue} className="section__entry" type="text" />
+                <button onClick={this.clickAdd} type="submit" className="section__add">{'Add'}</button>
             </div>
         )
     }
 }
-
 
 export default Section;
