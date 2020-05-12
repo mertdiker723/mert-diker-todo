@@ -7,9 +7,12 @@ export default class TodoList extends Component {
         return (
             <ul className="todoList">
                 {this.props.todos.map((item, index) => {                    
-                    return <ListItem id={item.id} deleteItemFromTodo={(val) => this.props.deleteTodo(val)} key={item.id} item={item.todoVal} index={index}/>                        
+                    return <ListItem id={item.id} key={item.id} item={item.title} index={index}/>                        
                 })}
             </ul>
         )
     }
 }
+
+
+

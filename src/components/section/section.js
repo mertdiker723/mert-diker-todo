@@ -15,7 +15,6 @@ class Section extends Component {
             value: e.target.value
         })
     }
-
     clickAdd = () => {
         if (this.state.value.trim() !== '') {
             this.props.addTodo(this.state.value);
@@ -27,7 +26,6 @@ class Section extends Component {
             alert("Alanı doldurunuz.")
         }
     }
-
     render() {
         return (
             <div className="section">

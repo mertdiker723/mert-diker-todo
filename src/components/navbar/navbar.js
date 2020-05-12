@@ -9,7 +9,7 @@ class Navbar extends PureComponent {
                 <a href="#about">About</a>
                 <a href="#news">News</a>
                 <a href="#contact">Contact</a>
-                <input className="input-search" placeholder="search" />
+                <input className="input-search" placeholder="search" /> {/* top-nav__input-search */}
             </div>
 
         )
