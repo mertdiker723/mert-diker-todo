@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 class RoutePage extends Component {
 
-    componentDidMount() {
+    componentDidMount() { 
         console.log(this.props.allValues.todoReducer)
     }
 
