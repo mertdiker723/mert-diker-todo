@@ -1,17 +1,34 @@
 import React, { Component } from 'react'
+import "./route.scss";
+import { loadTodoAction } from "../../action/todoAction";
+import { connect } from 'react-redux';
+
 
 class RoutePage extends Component {
-    constructor(props) {
-        super(props);
-        console.log(props);
+
+    componentDidMount() {
+        console.log(this.props.allValues.todoReducer)
     }
+
     render() {
         return (
-            <div style={{ margin: "300px" }}>
-                {this.props.match.params.id}
+            <div className="body-route">
+                <button className="body-route__back" onClick={() => this.props.history.push(`/`)}>Geri Dön</button>
+                <p className="body-route__paragraph">ID: {this.props.match.params.id}</p>
             </div>
         )
     }
 }
 
-export default RoutePage;
+const mapStateToProps = (state) => {
+    return {
+        allValues: state
+    }
+}
+
+const mapDispatchToProps = {
+    onCallTodo: loadTodoAction
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(RoutePage);
